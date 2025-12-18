@@ -5,11 +5,12 @@ import React, { useState } from 'react';
 export default function Home() {
   const [isRecording, setIsRecording] = useState(false);
   const [transcript, setTranscript] = useState("");
+  const [inputLanguage, setInputLanguage] = useState("en");
   const [outputLanguage, setOutputLanguage] = useState("es");
 
   const recognitionRef = React.useRef<any>(null);
   const [translatedText, setTranslatedText] = useState("");
-  const [inputLanguage, setInputLanguage] = useState("en");
+ 
 
 
   const speechLangMap: Record<string, string> = {
